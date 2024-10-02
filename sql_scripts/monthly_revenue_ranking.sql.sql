@@ -2,22 +2,22 @@ WITH RankedOrders AS
 (
 	SELECT
 		CASE 
-			WHEN os.order_status_name = 'Cancelled' THEN CAST(YEAR(fo.order_cancelled) AS VARCHAR(4)) + RIGHT('0' + CAST(MONTH(fo.order_cancelled) AS VARCHAR(2)), 2)  -- When the order is cancelled, the gross (Which will be cancellation fee only) is counted on the day of cancellation 
+			WHEN os.order_status_name = 'Cancelled' THEN CAST(YEAR(fo.order_cancelled) AS VARCHAR(4)) + RIGHT('0' + CAST(MONTH(fo.order_cancelled) AS VARCHAR(2)), 2)  -- When the order is cancelled, revenue (cancellation fee only) is counted on the day of cancellation 
 			ELSE CAST(YEAR(do.order_delivery) AS VARCHAR(4)) + RIGHT('0' + CAST(MONTH(do.order_delivery) AS VARCHAR(2)), 2)  -- When the order is not cancelled, revenue is counted on day of delivery
 		END AS Period,
 		ds.supplier_name,
 		SUM(fo.order_gross) AS Total_Revenue,
 		ROW_NUMBER() OVER (PARTITION BY
 									CASE 
-										WHEN os.order_status_name = 'Cancelled' THEN CAST(YEAR(fo.order_cancelled) AS VARCHAR(4)) + RIGHT('0' + CAST(MONTH(fo.order_cancelled) AS VARCHAR(2)), 2)  -- When the order is cancelled, the gross (Which will be cancellation fee only) is counted on the day of cancellation 
-										ELSE CAST(YEAR(do.order_delivery) AS VARCHAR(4)) + RIGHT('0' + CAST(MONTH(do.order_delivery) AS VARCHAR(2)), 2)  -- When the order is not cancelled, revenue is counted on day of delivery
+										WHEN os.order_status_name = 'Cancelled' THEN CAST(YEAR(fo.order_cancelled) AS VARCHAR(4)) + RIGHT('0' + CAST(MONTH(fo.order_cancelled) AS VARCHAR(2)), 2)  
+										ELSE CAST(YEAR(do.order_delivery) AS VARCHAR(4)) + RIGHT('0' + CAST(MONTH(do.order_delivery) AS VARCHAR(2)), 2)  
 									END
 							ORDER BY SUM(fo.order_gross) DESC
 		) AS RANK_DESC, -- Assigning a row number based on the total revenue, used to return the top 5 suppliers
 		ROW_NUMBER() OVER (PARTITION BY
 									CASE 
-										WHEN os.order_status_name = 'Cancelled' THEN CAST(YEAR(fo.order_cancelled) AS VARCHAR(4)) + RIGHT('0' + CAST(MONTH(fo.order_cancelled) AS VARCHAR(2)), 2)  -- When the order is cancelled, the gross (Which will be cancellation fee only) is counted on the day of cancellation 
-										ELSE CAST(YEAR(do.order_delivery) AS VARCHAR(4)) + RIGHT('0' + CAST(MONTH(do.order_delivery) AS VARCHAR(2)), 2)  -- When the order is not cancelled, revenue is counted on day of delivery
+										WHEN os.order_status_name = 'Cancelled' THEN CAST(YEAR(fo.order_cancelled) AS VARCHAR(4)) + RIGHT('0' + CAST(MONTH(fo.order_cancelled) AS VARCHAR(2)), 2)  
+										ELSE CAST(YEAR(do.order_delivery) AS VARCHAR(4)) + RIGHT('0' + CAST(MONTH(do.order_delivery) AS VARCHAR(2)), 2)  
 									END
 							ORDER BY SUM(fo.order_gross) ASC
 		) AS RANK_ASC -- As above, used to return the bottom 5 suppliers
@@ -48,16 +48,15 @@ WITH RankedOrders AS
 			ELSE CAST(YEAR(do.order_delivery) AS VARCHAR(4)) + RIGHT('0' + CAST(MONTH(do.order_delivery) AS VARCHAR(2)), 2)  
 		END,
 		ds.supplier_name
-
 )
 
 SELECT
-  Period,
-	Supplier_Name,
+	Period,
+	supplier_name,
 	Total_Revenue,
 	RANK_DESC as 'Rank'
 FROM
-	Rankedorders
+	RankedOrders
 WHERE 
 	RANK_DESC <= 5 -- Return the 5 best performing suppliers
 	OR RANK_ASC <= 5 -- Return the 5 worst performing suppliers
