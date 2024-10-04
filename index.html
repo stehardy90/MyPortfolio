@@ -7,6 +7,9 @@
             margin: 0;
             padding: 0px;
             background-color: #e9edf0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         .content {
             max-width: auto;
@@ -15,6 +18,7 @@
             padding: 20px;
             background-color: #e9edf0;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1;
         }
         .banner-container {
             margin: 0px auto; /* Reduce vertical spacing */
@@ -36,10 +40,9 @@
         }
         .social-links {
             text-align: center;
-            margin-top: 40px;
-            position: fixed;
-            bottom: 20px;
-            width: 100%;
+            padding: 20px;
+            background-color: #e9edf0;
+            margin-top: auto; /* Ensure this sits at the bottom */
         }
         .social-links a {
             margin: 0 15px;
@@ -131,6 +134,7 @@
                 </ul>
             </div>
         </div>
+
         <!-- Python Scripts Section -->
         <p><b><u>Python Scripts</u></b></p>
         <div class="scripts-container">
@@ -180,7 +184,8 @@
             </div>
         </div>
     </div>
-     <div class="social-links">
+
+    <div class="social-links">
         <!-- LinkedIn Icon -->
         <a href="https://www.linkedin.com/in/steven-hardy-307358147/" target="_blank" title="LinkedIn Profile">
             <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn Icon">
