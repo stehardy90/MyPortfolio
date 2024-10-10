@@ -89,12 +89,13 @@
         }
         
         .tech-box img {
-            max-width: 120px;  /* Set a maximum width */
-            max-height: 150px; /* Set a maximum height */
-            width: 100%;       /* Scale the image to fit within the container while respecting the max-width and max-height */
-            height: auto;      /* Maintain aspect ratio */
-            margin: 10px auto; /* Center the images */
-            display: block;    /* Ensure images are treated as block elements */
+            max-width: 100%;     /* Allow images to scale up to the full width of the container */
+            max-height: 120px;   /* Set a maximum height for the images */
+            object-fit: contain; /* Ensure the aspect ratio is preserved and the image fits within the box */
+            width: 100%;         /* Scale the image up to fit the width of the container */
+            height: auto;        /* Adjust the height automatically to maintain aspect ratio */
+            margin: 10px auto;   /* Center the images vertically and horizontally */
+            display: block;      /* Ensure the image is treated as a block element */
         }
         
         .tech-box .tech-images {
