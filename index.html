@@ -73,7 +73,6 @@
         }
 
         .tech-box {
-            flex: 1;
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
@@ -81,7 +80,9 @@
             text-align: center;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;  /* Align content to the top */
+            margin-bottom: 10px;
+            width: 100%;
         }
         
         .tech-box h3 {
@@ -89,13 +90,11 @@
         }
         
         .tech-box img {
-            max-width: 100%;     /* Allow images to scale up to the full width of the container */
-            max-height: 120px;   /* Set a maximum height for the images */
-            object-fit: contain; /* Ensure the aspect ratio is preserved and the image fits within the box */
-            width: 100%;         /* Scale the image up to fit the width of the container */
-            height: auto;        /* Adjust the height automatically to maintain aspect ratio */
-            margin: 10px auto;   /* Center the images vertically and horizontally */
-            display: block;      /* Ensure the image is treated as a block element */
+            max-width: 100px;    /* Ensure all images have a consistent max width */
+            max-height: 120px;   /* Ensure all images have a consistent max height */
+            object-fit: contain; /* Maintain aspect ratio for all images */
+            margin: 10px auto;   /* Center the images in the box */
+            display: block;
         }
         
         .tech-box .tech-images {
@@ -123,8 +122,26 @@
         }
         
         #data-engineering-box {
-            height: auto; 
-            min-height: 350px; 
+            min-height: 450px;   /* Make it taller to accommodate 5 images */
+        }
+
+        #data-engineering-box .tech-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);  /* 2-column grid */
+            grid-gap: 10px;
+            justify-items: center;   /* Center all images */
+        }
+        
+        #data-engineering-box .tech-images img:nth-child(5) {
+            grid-column: span 2;  /* Make the 5th image span across two columns, centering it */
+        }
+
+        .tech-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);  /* Keep 2x2 layout for other categories */
+            grid-gap: 10px;
+            justify-items: center;   /* Center images */
+            align-content: flex-start;  /* Ensure content aligns to the top of the box */
         }
 
     </style>
