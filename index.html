@@ -69,7 +69,7 @@
         .tech-stack-container {
             display: flex;
             justify-content: space-between;
-            margin: 20px 0;
+            margin: 10px 0; /* Reduced top margin */
             gap: 10px;
         }
 
@@ -80,12 +80,24 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .tech-box img {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 10px;
+            width: 80px;  /* Sized up images */
+            height: 80px;
+            margin: 5px;
+        }
+
+        .tech-box .tech-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;  /* Distribute images evenly */
+            width: 80%;  /* Image grid width */
+            margin: auto;
         }
 
         .social-links {
@@ -182,6 +194,38 @@
 
         </br>
 
+        <!-- Python Scripts Section -->
+        <div class="sub-banner-container">
+            <img src="page_images/PYTHON SCRIPTS.png" alt="Python Scripts Banner" class="banner">
+        </div>     
+
+        </br>
+
+        <!-- Placeholder Section for Python Scripts -->
+        <div class="scripts-container">
+            <div class="script-box">
+                <strong>Script Name:</strong> 
+                <a href="https://github.com/stehardy90/DataEngineerPortfolio/blob/main/sql_scripts/monthly_revenue_ranking.sql" target="_blank">
+                    <em>placeholder_python_script.py</em>
+                </a><br>
+                <strong>Description:</strong> This Python script automates data cleaning for large datasets, applying transformations to prepare data for downstream analysis.<br>
+                <strong>Key Details:</strong>
+                <ul>
+                    <li><strong>Purpose:</strong> Automates data cleaning and transformation processes.</li>
+                    <li><strong>Performance:</strong> Processes 100,000 rows in under 5 seconds.</li>
+                    <li><strong>Key Competencies:</strong> Data processing, automation, Python, pandas</li>
+                </ul>
+            </div>
+        </div>
+
+        </br>
+
+
+        <!-- Other Section -->
+        <div class="sub-banner-container">
+            <img src="page_images/OTHER_V2.png" alt="Other Banner" class="banner">
+        </div>   
+        
         <!-- Technology Stack Section -->
         <div class="sub-banner-container">
             <img src="page_images/TECHNOLOGY_STACK.png" alt="Technology Stack Banner" class="banner">
@@ -191,25 +235,43 @@
         <div class="tech-stack-container">
             <div class="tech-box">
                 <h3>Data Engineering & Integration</h3>
-                <img src="page_images/placeholder.png" alt="Tech 1">
-                <img src="page_images/placeholder.png" alt="Tech 2">
+                <div class="tech-images">
+                    <img src="page_images/placeholder.png" alt="Tech 1">
+                    <img src="page_images/placeholder.png" alt="Tech 2">
+                    <img src="page_images/placeholder.png" alt="Tech 3">
+                    <img src="page_images/placeholder.png" alt="Tech 4">
+                </div>
             </div>
             <div class="tech-box">
                 <h3>Data Warehousing & Databases</h3>
-                <img src="page_images/placeholder.png" alt="Tech 3">
-                <img src="page_images/placeholder.png" alt="Tech 4">
+                <div class="tech-images">
+                    <img src="page_images/placeholder.png" alt="Tech 1">
+                    <img src="page_images/placeholder.png" alt="Tech 2">
+                    <img src="page_images/placeholder.png" alt="Tech 3">
+                    <img src="page_images/placeholder.png" alt="Tech 4">
+                </div>
             </div>
             <div class="tech-box">
                 <h3>Data Visualization & Reporting</h3>
-                <img src="page_images/placeholder.png" alt="Tech 5">
-                <img src="page_images/placeholder.png" alt="Tech 6">
+                <div class="tech-images">
+                    <img src="page_images/placeholder.png" alt="Tech 1">
+                    <img src="page_images/placeholder.png" alt="Tech 2">
+                    <img src="page_images/placeholder.png" alt="Tech 3">
+                    <img src="page_images/placeholder.png" alt="Tech 4">
+                </div>
             </div>
             <div class="tech-box">
                 <h3>Development & Automation</h3>
-                <img src="page_images/placeholder.png" alt="Tech 7">
-                <img src="page_images/placeholder.png" alt="Tech 8">
+                <div class="tech-images">
+                    <img src="page_images/placeholder.png" alt="Tech 1">
+                    <img src="page_images/placeholder.png" alt="Tech 2">
+                    <img src="page_images/placeholder.png" alt="Tech 3">
+                    <img src="page_images/placeholder.png" alt="Tech 4">
+                </div>
             </div>
         </div>
+
+        </br>
 
         </br>
 
