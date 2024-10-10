@@ -26,9 +26,11 @@
             text-align: center; /* Keep the banner centered */
         }
         .sub-banner-container {
-            margin: 0px auto; /* Reduce vertical spacing */
-            padding: 0; /* No padding */
-            text-align: center; /* Keep the banner centered */
+            width: calc(100% - 50px); /* Reduces the total width by 50px */
+            max-width: 100%; /* Ensures the image doesn't stretch beyond its natural size */
+            height: auto; /* Keeps the aspect ratio */
+            margin: 0 auto; /* Centers the image */
+            display: block; /* Ensures the image is treated as a block-level element */
         }
         .banner {
             width: 100%;
@@ -107,7 +109,6 @@
     <div class="sub-banner-container">
         <img src="page_images/SQL SCRIPTS.png" alt="Banner Image" class="banner">
     </div>        
-        <p><b><u>SQL Scripts</u></b></p>
         <div class="scripts-container">
             <div class="script-box">
                 <strong>Script Name:</strong> 
@@ -160,7 +161,6 @@
     <div class="sub-banner-container">
         <img src="page_images/PYTHON.png" alt="Banner Image" class="banner">
     </div>      
-        <p><b><u>Python Scripts</u></b></p>
         <div class="scripts-container">
             <div class="script-box">
                 <strong>Script Name:</strong> 
