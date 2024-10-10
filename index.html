@@ -64,14 +64,14 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
         }
-
+        
         .tech-stack-container {
             display: flex;
             justify-content: space-between;
             margin: 10px 0;
             gap: 10px;
         }
-
+        
         .tech-box {
             background-color: #fff;
             padding: 20px;
@@ -80,10 +80,10 @@
             text-align: center;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;  /* Align entire grid content to the top of the box */
+            justify-content: flex-start;  /* Align grid to the top of the box */
             margin-bottom: 10px;
             width: 100%;
-            height: auto;  /* Let it adjust based on content */
+            height: auto;  /* Adjust based on content */
         }
         
         .tech-box h3 {
@@ -91,61 +91,46 @@
         }
         
         .tech-box img {
-            max-width: 150px;    /* Set a max width for the images */
-            max-height: 150px;   /* Set a max height */
-            width: 100%;         /* Scale image to fit within its container */
-            height: auto;        /* Maintain aspect ratio */
-            object-fit: contain; /* Preserve aspect ratio */
-            margin: 0 auto;      /* Center the image horizontally within the cell */
+            max-width: 100%;    /* Scale the image up to fit within its grid square */
+            max-height: 100%;   /* Ensure images don’t exceed their container size */
+            object-fit: contain; /* Maintain the aspect ratio without stretching */
             display: block;
         }
         
-        .tech-box .tech-images {
+        .tech-images {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);  /* 2x2 grid */
-            grid-gap: 10px;
-            justify-content: center;
+            grid-template-columns: repeat(2, 1fr);  /* 2 columns */
+            grid-template-rows: repeat(3, 1fr);     /* 3 rows */
+            gap: 10px;
+            justify-items: center;   /* Center images horizontally */
+            align-items: center;     /* Center images vertically */
+            height: 100%;            /* Ensure the grid takes up full height of the box */
+            width: 100%;             /* Full width of the box */
         }
-
+        
+        #data-engineering-box {
+            min-height: 450px;   /* Make it taller to accommodate 5 images */
+        }
+        
+        #data-engineering-box .tech-images img:nth-child(5) {
+            grid-column: span 2;  /* Make the 5th image span across two columns, centering it */
+        }
+        
         .social-links {
             text-align: center;
             padding: 20px;
             background-color: #e9edf0;
             margin-top: auto;
         }
-
+        
         .social-links a {
             margin: 0 15px;
             text-decoration: none;
         }
-
+        
         .social-links img {
             width: 40px;
             height: auto;
-        }
-        
-        #data-engineering-box {
-            min-height: 450px;   /* Make it taller to accommodate 5 images */
-        }
-
-        #data-engineering-box .tech-images {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);  /* 2-column grid */
-            grid-gap: 10px;
-            justify-items: center;   /* Center all images */
-        }
-        
-        #data-engineering-box .tech-images img:nth-child(5) {
-            grid-column: span 2;  /* Make the 5th image span across two columns, centering it */
-        }
-
-        .tech-images {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);  /* 2-column grid */
-            grid-gap: 10px;
-            justify-items: center;   /* Center images horizontally in their grid cells */
-            align-items: center;     /* Center images vertically in their grid cells */
-            width: 100%;             /* Ensure the grid takes the full width of the box */
         }
 
     </style>
