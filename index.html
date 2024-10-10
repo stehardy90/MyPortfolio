@@ -69,7 +69,7 @@
         .tech-stack-container {
             display: flex;
             justify-content: space-between;
-            margin: 10px 0; /* Reduced top margin */
+            margin: 10px 0;
             gap: 10px;
         }
 
@@ -82,22 +82,20 @@
             text-align: center;
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
         }
 
         .tech-box img {
-            width: 80px;  /* Sized up images */
-            height: 80px;
+            width: 40%;  /* Sized up images to fill more space */
+            height: 40%;
             margin: 5px;
         }
 
         .tech-box .tech-images {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;  /* Distribute images evenly */
-            width: 80%;  /* Image grid width */
-            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);  /* 2x2 grid */
+            grid-gap: 10px;
+            justify-content: center;
         }
 
         .social-links {
@@ -216,16 +214,43 @@
                     <li><strong>Key Competencies:</strong> Data processing, automation, Python, pandas</li>
                 </ul>
             </div>
+
+            <div class="script-box">
+                <strong>Script Name:</strong> 
+                <a href="https://github.com/stehardy90/DataEngineerPortfolio/blob/main/sql_scripts/placeholder.sql" target="_blank">
+                    <em>placeholder_python_script_2.py</em>
+                </a><br>
+                <strong>Description:</strong> This Python script extracts data from an API, cleans the data, and loads it into a data warehouse for reporting.<br>
+                <strong>Key Details:</strong>
+                <ul>
+                    <li><strong>Purpose:</strong> To automate ETL processes for API data.</li>
+                    <li><strong>Performance:</strong> Processes data in real time, handling up to 10,000 API calls per hour.</li>
+                </ul>
+            </div>
+
+            <div class="script-box">
+                <strong>Script Name:</strong> 
+                <a href="https://github.com/stehardy90/DataEngineerPortfolio/blob/main/sql_scripts/placeholder.sql" target="_blank">
+                    <em>placeholder_python_script_3.py</em>
+                </a><br>
+                <strong>Description:</strong> This Python script generates visual reports based on database data using matplotlib.<br>
+                <strong>Key Details:</strong>
+                <ul>
+                    <li><strong>Purpose:</strong> To automate report generation and visualization.</li>
+                    <li><strong>Performance:</strong> Generates graphs for datasets with over 1,000,000 rows in under 2 seconds.</li>
+                </ul>
+            </div>
         </div>
 
         </br>
 
-
         <!-- Other Section -->
         <div class="sub-banner-container">
             <img src="page_images/OTHER_V2.png" alt="Other Banner" class="banner">
-        </div>   
-        
+        </div>     
+
+        </br>
+
         <!-- Technology Stack Section -->
         <div class="sub-banner-container">
             <img src="page_images/TECHNOLOGY_STACK.png" alt="Technology Stack Banner" class="banner">
@@ -236,42 +261,40 @@
             <div class="tech-box">
                 <h3>Data Engineering & Integration</h3>
                 <div class="tech-images">
-                    <img src="page_images/placeholder.png" alt="Tech 1">
-                    <img src="page_images/placeholder.png" alt="Tech 2">
-                    <img src="page_images/placeholder.png" alt="Tech 3">
-                    <img src="page_images/placeholder.png" alt="Tech 4">
+                    <img src="placeholder.png" alt="Tech 1">
+                    <img src="placeholder.png" alt="Tech 2">
+                    <img src="placeholder.png" alt="Tech 3">
+                    <img src="placeholder.png" alt="Tech 4">
                 </div>
             </div>
             <div class="tech-box">
                 <h3>Data Warehousing & Databases</h3>
                 <div class="tech-images">
-                    <img src="page_images/placeholder.png" alt="Tech 1">
-                    <img src="page_images/placeholder.png" alt="Tech 2">
-                    <img src="page_images/placeholder.png" alt="Tech 3">
-                    <img src="page_images/placeholder.png" alt="Tech 4">
+                    <img src="placeholder.png" alt="Tech 1">
+                    <img src="placeholder.png" alt="Tech 2">
+                    <img src="placeholder.png" alt="Tech 3">
+                    <img src="placeholder.png" alt="Tech 4">
                 </div>
             </div>
             <div class="tech-box">
                 <h3>Data Visualization & Reporting</h3>
                 <div class="tech-images">
-                    <img src="page_images/placeholder.png" alt="Tech 1">
-                    <img src="page_images/placeholder.png" alt="Tech 2">
-                    <img src="page_images/placeholder.png" alt="Tech 3">
-                    <img src="page_images/placeholder.png" alt="Tech 4">
+                    <img src="placeholder.png" alt="Tech 1">
+                    <img src="placeholder.png" alt="Tech 2">
+                    <img src="placeholder.png" alt="Tech 3">
+                    <img src="placeholder.png" alt="Tech 4">
                 </div>
             </div>
             <div class="tech-box">
                 <h3>Development & Automation</h3>
                 <div class="tech-images">
-                    <img src="page_images/placeholder.png" alt="Tech 1">
-                    <img src="page_images/placeholder.png" alt="Tech 2">
-                    <img src="page_images/placeholder.png" alt="Tech 3">
-                    <img src="page_images/placeholder.png" alt="Tech 4">
+                    <img src="placeholder.png" alt="Tech 1">
+                    <img src="placeholder.png" alt="Tech 2">
+                    <img src="placeholder.png" alt="Tech 3">
+                    <img src="placeholder.png" alt="Tech 4">
                 </div>
             </div>
         </div>
-
-        </br>
 
         </br>
 
