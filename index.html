@@ -86,11 +86,12 @@
         }
 
         .tech-box img {
-            width: 40%;  /* Sized up images to fill more space */
-            height: 40%;
-            margin: 5px;
+            width: 80px;  /* Set a fixed size for images to avoid stretching */
+            height: 80px;
+            margin: 10px auto;  /* Center the images by setting auto margins */
+            display: block;  /* Ensure images are block elements */
         }
-
+        
         .tech-box .tech-images {
             display: grid;
             grid-template-columns: repeat(2, 1fr);  /* 2x2 grid */
@@ -189,18 +190,22 @@
                 </ul>
             </div>
 
-            <!-- Re-added SQL Script Box -->
             <div class="script-box">
                 <strong>Script Name:</strong> 
                 <a href="https://github.com/stehardy90/DataEngineerPortfolio/blob/main/sql_scripts/snowflake_salary_masking.sql" target="_blank">
                     <em>snowflake_salary_masking.sql</em>
                 </a><br>
-                <strong>Description:</strong> This SQL script creates a dynamic masking policy for the salary field in Snowflake. The policy reveals the salary to users with the "LEAD_DEVELOPER" role and masks it for all other users.<br>
-                <strong>Key Details:</strong>
-                <ul>
-                    <li><strong>Purpose:</strong> To apply a dynamic masking policy for sensitive salary data in Snowflake.</li>
-                    <li><strong>Key Competencies:</strong> Security, data masking, role-based access control in Snowflake.</li>
-                </ul>
+                <strong>Description:</strong> Creates a dynamic masking policy named salary_masking_policy for the salary field, which reveals the actual salary value only to users with the LEAD_DEVELOPER role and masks it for all other users. It then applies this masking policy to the salary column in the employee table.<br>
+                <strong>Script Name:</strong> 
+                <a href="https://github.com/stehardy90/DataEngineerPortfolio/blob/main/sql_scripts/snowflake_dynamic_pivot.sql" target="_blank">
+                    <em>snowflake_dynamic_pivot.sql</em>
+                </a><br>
+                <strong>Description:</strong> Dynamically pivots the results of the 'SupplierSales' CTE, making use of the Snowflake 'ANY' keyword. Without 'ANY', each SUPPLIER_ID would need to be explicitly specified, which is inefficient and difficult to maintain when IDs frequently change.<br>
+                <strong>Script Name:</strong> 
+                <a href="https://github.com/stehardy90/DataEngineerPortfolio/blob/main/sql_scripts/snowflake_timetravel.sql" target="_blank">
+                    <em>snowflake_timetravel.sql</em>
+                </a><br>
+                <strong>Description:</strong> Uses Snowflakes timetravel functionality to access and query historical data from a previous point in time, useful for recovering accidentally deleted or modified data, auditing changes, and comparing past and current states of data without needing backups or manual version control.<br>
             </div>
         </div>
 
