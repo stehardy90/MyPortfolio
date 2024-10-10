@@ -73,7 +73,6 @@
         }
 
         .tech-box {
-            flex: 1;
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
@@ -82,20 +81,19 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            margin-bottom: 10px;
         }
-        
+                
         .tech-box h3 {
             margin-top: 5px;  /* Reduce the gap between the title and the top of the box */
         }
         
         .tech-box img {
-            max-width: 100%;     /* Allow images to scale up to the full width of the container */
-            max-height: 120px;   /* Set a maximum height for the images */
-            object-fit: contain; /* Ensure the aspect ratio is preserved and the image fits within the box */
-            width: 100%;         /* Scale the image up to fit the width of the container */
-            height: auto;        /* Adjust the height automatically to maintain aspect ratio */
-            margin: 10px auto;   /* Center the images vertically and horizontally */
-            display: block;      /* Ensure the image is treated as a block element */
+            max-width: 100px;    /* Ensure all images have a consistent max width */
+            max-height: 120px;   /* Ensure all images have a consistent max height */
+            object-fit: contain; /* Maintain aspect ratio for all images */
+            margin: 10px auto;   /* Center the images in the box */
+            display: block;
         }
         
         .tech-box .tech-images {
@@ -123,10 +121,26 @@
         }
         
         #data-engineering-box {
-            height: auto; 
-            min-height: 350px; 
+            height: auto;       
+            min-height: 400px;   
+            width: 100%;         
         }
 
+        #data-engineering-box .tech-images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);  /* Use a 3-column grid for the first row */
+            grid-gap: 10px;
+            justify-items: center;   /* Center all images */
+            margin-top: 10px;
+        }
+
+        .tech-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);  /* Keep 2x2 layout for other categories */
+            grid-gap: 10px;
+            justify-items: center;   /* Center images */
+        }
+        
     </style>
 </head>
 <body>
