@@ -80,9 +80,10 @@
             text-align: center;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;  /* Align content to the top */
+            justify-content: flex-start;  /* Align entire grid content to the top of the box */
             margin-bottom: 10px;
             width: 100%;
+            height: auto;  /* Let it adjust based on content */
         }
         
         .tech-box h3 {
@@ -90,12 +91,12 @@
         }
         
         .tech-box img {
-            max-width: 150px;    /* Set the maximum width for images to scale up */
-            max-height: 150px;   /* Set the maximum height for images */
-            width: 100%;         /* Scale the image to fit within the container */
+            max-width: 150px;    /* Set a max width for the images */
+            max-height: 150px;   /* Set a max height */
+            width: 100%;         /* Scale image to fit within its container */
             height: auto;        /* Maintain aspect ratio */
-            object-fit: contain; /* Ensure the aspect ratio is preserved */
-            margin: 10px auto;   /* Center the images */
+            object-fit: contain; /* Preserve aspect ratio */
+            margin: 0 auto;      /* Center the image horizontally within the cell */
             display: block;
         }
         
@@ -140,10 +141,11 @@
 
         .tech-images {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);  /* Keep 2x2 layout for other categories */
+            grid-template-columns: repeat(2, 1fr);  /* 2-column grid */
             grid-gap: 10px;
-            justify-items: center;   /* Center images */
-            align-content: flex-start;  /* Ensure content aligns to the top of the box */
+            justify-items: center;   /* Center images horizontally in their grid cells */
+            align-items: center;     /* Center images vertically in their grid cells */
+            width: 100%;             /* Ensure the grid takes the full width of the box */
         }
 
     </style>
