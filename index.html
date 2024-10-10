@@ -21,22 +21,22 @@
             flex: 1;
         }
         .banner-container {
-            margin: 0px auto; /* Reduce vertical spacing */
-            padding: 0; /* No padding */
-            text-align: center; /* Keep the banner centered */
+            margin: 0px auto;
+            padding: 0;
+            text-align: center;
         }
         .sub-banner-container {
-            width: calc(100% - 0px); /* Reduces the total width by 50px */
-            max-width: 100%; /* Ensures the image doesn't stretch beyond its natural size */
-            height: auto; /* Keeps the aspect ratio */
-            margin: 0 auto; /* Centers the image */
-            display: block; /* Ensures the image is treated as a block-level element */
+            width: calc(100% - 0px);
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+            display: block;
         }
         .banner {
             width: 100%;
-            height: auto; /* Keep aspect ratio */
-            margin: 0; /* Remove any margin */
-            padding: 0; /* Ensure no padding */
+            height: auto;
+            margin: 0;
+            padding: 0;
         }
         h1 {
             color: #333;
@@ -45,34 +45,11 @@
         p {
             line-height: 1.6;
         }
-        .social-links {
-            text-align: center;
-            padding: 20px;
-            background-color: #e9edf0;
-            margin-top: auto; /* Ensure this sits at the bottom */
-        }
-        .social-links a {
-            margin: 0 15px;
-            text-decoration: none;
-        }
-        .social-links img {
-            width: 40px; /* Adjust icon size */
-            height: auto;
-        }
-        p {
-            margin-bottom: 5px; /* Adjust the margin as needed */
-        }
-        ul {
-            margin-top: 0; /* Remove the gap between the paragraph and the list */
-        }
-
-        /* New CSS for the three boxes layout */
         .scripts-container {
             display: flex;
             gap: 20px;
             justify-content: space-between;
         }
-
         .script-box {
             flex: 1;
             background-color: #fff;
@@ -80,8 +57,6 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
-        /* New box for the introduction */
         .intro-box {
             background-color: #fff;
             padding: 20px;
@@ -90,13 +65,55 @@
             margin-bottom: 20px;
         }
 
+        /* New CSS for the Technology Stack Section */
+        .tech-stack-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            gap: 10px;
+        }
+
+        .tech-box {
+            flex: 1;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .tech-box img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            text-align: center;
+            padding: 20px;
+            background-color: #e9edf0;
+            margin-top: auto;
+        }
+
+        .social-links a {
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        .social-links img {
+            width: 40px;
+            height: auto;
+        }
+
     </style>
 </head>
 <body>
+    <!-- Banner Section -->
     <div class="banner-container">
         <img src="page_images/BANNER.png" alt="Banner Image" class="banner">
     </div>
     
+    <!-- Content Section -->
     <div class="content">
         <!-- Introduction Section -->
         <div class="intro-box">
@@ -104,22 +121,33 @@
             <p>I'm Steven, a data engineer with 10 years of experience working with SQL, ETL pipelines, and cloud platforms. Throughout my career, I've built and optimised data solutions. This portfolio showcases some of the key projects I've worked on, including SQL and ETL Automation.</p> 
             <p>Feel free to explore my work and reach out with any questions!<br></p>
         </div>
+
+        <!-- Batch Data Banner -->
         <div class="sub-banner-container">
-            <img src="page_images/BATCH DATA.png" alt="Banner Image" class="banner">
-        </div>     
-    </br>
-        <div class="sub-banner-container">
-        <img src="page_images/STREAMING WORK IN PROGRESS.png" alt="Banner Image" class="banner">
+            <img src="page_images/BATCH DATA.png" alt="Batch Data Banner" class="banner">
         </div>
+
         </br>
-        <img src="page_images/WIP.jpg" alt="Banner Image" class="banner" style="width: 30%; height: auto; display: block; margin: 0 auto;">
+
+        <!-- Streaming Work in Progress Banner -->
+        <div class="sub-banner-container">
+            <img src="page_images/STREAMING WORK IN PROGRESS.png" alt="Streaming Work In Progress Banner" class="banner">
+        </div>
+
+        </br>
+
+        <!-- WIP Image -->
+        <img src="page_images/WIP.jpg" alt="Work In Progress Image" class="banner" style="width: 30%; height: auto; display: block; margin: 0 auto;">
         </br>
         </br>
+
         <!-- SQL Scripts Section -->
         <div class="sub-banner-container">
-            <img src="page_images/SQL.png" alt="Banner Image" class="banner">
+            <img src="page_images/SQL.png" alt="SQL Banner" class="banner">
         </div>     
-    </br>
+
+        </br>
+
         <div class="scripts-container">
             <div class="script-box">
                 <strong>Script Name:</strong> 
@@ -150,89 +178,44 @@
                     <li><strong>Key Competencies:</strong> SQL ETL processing, error handling, merge logic, performance monitoring</li>
                 </ul>
             </div>
+        </div>
 
-            <div class="script-box">
-                <strong>Script Name:</strong> 
-                <a href="https://github.com/stehardy90/DataEngineerPortfolio/blob/main/sql_scripts/snowflake_salary_masking.sql" target="_blank">
-                    <em>snowflake_salary_masking.sql</em>
-                </a><br>
-                <strong>Description:</strong> Creates a dynamic masking policy named salary_masking_policy for the salary field, which reveals the actual salary value only to users with the LEAD_DEVELOPER role and masks it for all other users. It then applies this masking policy to the salary column in the employee table.<br>
-                <strong>Script Name:</strong> 
-                <a href="https://github.com/stehardy90/DataEngineerPortfolio/blob/main/sql_scripts/snowflake_dynamic_pivot.sql" target="_blank">
-                    <em>snowflake_dynamic_pivot.sql</em>
-                </a><br>
-                <strong>Description:</strong> Dynamically pivots the results of the 'SupplierSales' CTE, making use of the Snowflake 'ANY' keyword. Without 'ANY', each SUPPLIER_ID would need to be explicitly specified, which is inefficient and difficult to maintain when IDs frequently change.<br>
-                <strong>Script Name:</strong> 
-                <a href="https://github.com/stehardy90/DataEngineerPortfolio/blob/main/sql_scripts/snowflake_timetravel.sql" target="_blank">
-                    <em>snowflake_timetravel.sql</em>
-                </a><br>
-                <strong>Description:</strong> Uses Snowflakes timetravel functionality to access and query historical data from a previous point in time, useful for recovering accidentally deleted or modified data, auditing changes, and comparing past and current states of data without needing backups or manual version control.<br>
+        </br>
+
+        <!-- Technology Stack Section -->
+        <div class="sub-banner-container">
+            <img src="page_images/TECHNOLOGY_STACK.png" alt="Technology Stack Banner" class="banner">
+        </div>
+
+        <!-- Technology Stack Boxes -->
+        <div class="tech-stack-container">
+            <div class="tech-box">
+                <h3>Data Engineering & Integration</h3>
+                <img src="placeholder.png" alt="Tech 1">
+                <img src="placeholder.png" alt="Tech 2">
+            </div>
+            <div class="tech-box">
+                <h3>Data Warehousing & Databases</h3>
+                <img src="placeholder.png" alt="Tech 3">
+                <img src="placeholder.png" alt="Tech 4">
+            </div>
+            <div class="tech-box">
+                <h3>Data Visualization & Reporting</h3>
+                <img src="placeholder.png" alt="Tech 5">
+                <img src="placeholder.png" alt="Tech 6">
+            </div>
+            <div class="tech-box">
+                <h3>Development & Automation</h3>
+                <img src="placeholder.png" alt="Tech 7">
+                <img src="placeholder.png" alt="Tech 8">
             </div>
         </div>
-    </br>
-        <!-- Python Scripts Section -->
-        <div class="sub-banner-container">
-            <img src="page_images/PYTHON SCRIPTS.png" alt="Banner Image" class="banner">
-        </div>
-    </br>
-        <div class="scripts-container">
-            <div class="script-box">
-                <strong>Script Name:</strong> 
-                <a href="https://github.com/stehardy90/DataEngineerPortfolio/blob/main/sql_scripts/monthly_revenue_ranking.sql" target="_blank">
-                    <em>monthly_revenue_ranking.sql</em>
-                </a><br>
-                <strong>Description:</strong> This SQL script retrieves a summary of customer spending, calculating the total gross revenue generated by each customer within a specified time period. It provides insights into customer purchasing behavior.<br>
-                <strong>Key Details:</strong>
-                <ul>
-                    <li><strong>Purpose:</strong> To calculate total monthly gross revenue for each supplier, returning the top 5 and bottom 5 performers in each period.</li>
-                    <li><strong>Performance:</strong> The script runs in approximately 1 second on a dataset with over 10,000,000 rows in the orders table.</li>
-                    <li><strong>Database:</strong> Designed for use on a SQL Server database.</li>
-                    <li><strong>Key Competencies:</strong> Advanced data aggregation, performance optimisation, window functions and ranking, dynamic date filtering, common table expressions (CTEs)</li>
-                </ul>
-            </div>
 
-            <div class="script-box">
-                <strong>Script Name:</strong> 
-                <a href="https://github.com/stehardy90/DataEngineerPortfolio/blob/main/sql_scripts/monthly_revenue_ranking.sql" target="_blank">
-                    <em>placeholder.sql</em>
-                </a><br>
-                <strong>Description:</strong> This SQL script retrieves a summary of customer spending, calculating the total gross revenue generated by each customer within a specified time period. It provides insights into customer purchasing behavior.<br>
-                <strong>Key Details:</strong>
-                <ul>
-                    <li><strong>Purpose:</strong> To calculate total gross revenue for each customer, helping analyze revenue trends and identify top customers.</li>
-                    <li><strong>Performance:</strong> The script runs in approximately 1 second on a dataset with 100,000 rows.</li>
-                    <li><strong>Database:</strong> Designed for use on a SQL Server database.</li>
-                    <li><strong>Usage:</strong> Useful for generating customer revenue reports, feeding into dashboards, or further analysis of customer data.</li>
-                </ul>
-            </div>
+        </br>
 
-            <div class="script-box">
-                <!-- Additional content can go here -->
-                <strong>Script Name:</strong> 
-                <a href="https://github.com/stehardy90/DataEngineerPortfolio/blob/main/sql_scripts/another_script.sql" target="_blank">
-                    <em>another_script.sql</em>
-                </a><br>
-                <strong>Description:</strong> This SQL script performs advanced filtering of transactions, identifying outliers and unusual patterns in revenue generation.<br>
-                <strong>Key Details:</strong>
-                <ul>
-                    <li><strong>Purpose:</strong> To highlight discrepancies in revenue for further investigation.</li>
-                    <li><strong>Performance:</strong> The script runs in under 2 seconds on large datasets.</li>
-                    <li><strong>Database:</strong> Designed for use on PostgreSQL databases.</li>
-                </ul>
-            </div>
-        </div>
-        </br>
-        <div class="sub-banner-container">
-        <img src="page_images/OTHER_V2.png" alt="Banner Image" class="banner">
-        </div>     
-        </br>
-        <div class="sub-banner-container">
-        <img src="page_images/TECHNOLOGY_STACK.png" alt="Banner Image" class="banner">
-        </div>     
-        </br>
     </div>
 
-
+    <!-- Social Links Section -->
     <div class="social-links">
         <!-- LinkedIn Icon -->
         <a href="https://www.linkedin.com/in/steven-hardy-307358147/" target="_blank" title="LinkedIn Profile">
