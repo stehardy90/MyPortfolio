@@ -82,6 +82,7 @@
             flex-direction: column;
             justify-content: center;
             margin-bottom: 10px;
+            width: 100%;   /* Ensure all boxes have consistent width */
         }
                 
         .tech-box h3 {
@@ -121,17 +122,20 @@
         }
         
         #data-engineering-box {
-            height: auto;       
-            min-height: 400px;   
-            width: 100%;         
+            height: auto;        /* Let it expand automatically */
+            min-height: 450px;   /* Ensure it's taller than other boxes */
         }
 
         #data-engineering-box .tech-images {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);  /* Use a 3-column grid for the first row */
+            grid-template-columns: repeat(2, 1fr);  /* 2-column grid */
             grid-gap: 10px;
             justify-items: center;   /* Center all images */
             margin-top: 10px;
+        }
+
+        #data-engineering-box .tech-images img:nth-child(5) {
+            grid-column: span 2;  /* Make the 5th image span across two columns, centering it */
         }
 
         .tech-images {
