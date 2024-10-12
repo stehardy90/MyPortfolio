@@ -157,7 +157,81 @@
             <img src="page_images/BATCH DATA.png" alt="Batch Data Banner" class="banner">
         </div>
         <img src="page_images/footballarch.png" alt="Football Pipeline Architecture">
+        <div class="scripts-container">
+            <div class="script-box">
+                <strong>Script Name:</strong> 
+                <a href="https://github.com/stehardy90/DataEngineerPortfolio/blob/main/sql_scripts/monthly_revenue_ranking.sql" target="_blank">
+                    <em>monthly_revenue_ranking.sql</em>
+                </a><br>
+                </br>
+                <strong>Description:</strong> Calculates total revenue by supplier over the past 12 months. It ranks suppliers by revenue for each period, returning the top 5 and bottom 5 suppliers for each month.<br>
+                </br>
+                <strong>Key Details:</strong>
+                <ul>
+                    <li><strong>Purpose:</strong> To calculate total monthly gross revenue for each supplier, returning the top 5 and bottom 5 performers in each period.</li>
+                    <li><strong>Performance:</strong> The script runs in approximately 1 second on a dataset with over 10,000,000 rows in the orders table.</li>
+                    <li><strong>Database:</strong> Designed for use on a SQL Server database.</li>
+                    <li><strong>Key Competencies:</strong> Advanced data aggregation, performance optimisation, window functions and ranking, dynamic date filtering, common table expressions (CTEs)</li>
+                </ul>
+            </div>
 
+            <div class="script-box">
+                <strong>Script Name:</strong> 
+                <a href="https://github.com/stehardy90/DataEngineerPortfolio/blob/main/sql_scripts/etl_UpdateFactOrders.sql" target="_blank">
+                    <em>etl_UpdateFactOrders.sql</em>
+                </a><br>
+                </br>
+                <strong>Description:</strong> An ETL stored procedure to update the fact.orders table by processing order data from the staging area, applying performance optimisations, setting specific flags (e.g., non-delivery), and merging updates into the fact table.<br>
+                </br>
+                <strong>Key Details:</strong>
+                <ul>
+                    <li><strong>Purpose:</strong> The procedure ensures that the fact.orders table is up-to-date with the latest order data, using efficient filtering and caching mechanisms to handle only relevant records, improving performance and data accuracy.</li>
+                    <li><strong>Performance:</strong> The script runs in < 1 minute.</li>
+                    <li><strong>Database:</strong> Designed for use on a SQL Server database.</li>
+                    <li><strong>Key Competencies:</strong> SQL ETL processing, error handling, merge logic, performance monitoring</li>
+                </ul>
+            </div>
+
+            <div class="script-box">
+                <strong>Script Name:</strong> 
+                <a href="https://github.com/stehardy90/DataEngineerPortfolio/blob/main/sql_scripts/snowflake_salary_masking.sql" target="_blank">
+                    <em>snowflake_salary_masking.sql</em>
+                </a><br>
+                <strong>Description:</strong> Creates a dynamic masking policy named salary_masking_policy for the salary field, which reveals the actual salary value only to users with the LEAD_DEVELOPER role and masks it for all other users. It then applies this masking policy to the salary column in the employee table.<br>
+                </br>
+                <strong>Script Name:</strong> 
+                <a href="https://github.com/stehardy90/DataEngineerPortfolio/blob/main/sql_scripts/snowflake_dynamic_pivot.sql" target="_blank">
+                    <em>snowflake_dynamic_pivot.sql</em>
+                </a><br>
+                <strong>Description:</strong> Dynamically pivots the results of the 'SupplierSales' CTE, making use of the Snowflake 'ANY' keyword. Without 'ANY', each SUPPLIER_ID would need to be explicitly specified, which is inefficient and difficult to maintain when IDs frequently change.<br>
+                </br>
+                <strong>Script Name:</strong> 
+                <a href="https://github.com/stehardy90/DataEngineerPortfolio/blob/main/sql_scripts/snowflake_timetravel.sql" target="_blank">
+                    <em>snowflake_timetravel.sql</em>
+                </a><br>
+                <strong>Description:</strong> Uses Snowflakes timetravel functionality to access and query historical data from a previous point in time, useful for recovering accidentally deleted or modified data, auditing changes, and comparing past and current states of data without needing backups or manual version control.<br>
+            </div>
+
+                        <div class="script-box">
+                <strong>Script Name:</strong> 
+                <a href="https://github.com/stehardy90/DataEngineerPortfolio/blob/main/sql_scripts/snowflake_salary_masking.sql" target="_blank">
+                    <em>snowflake_salary_masking.sql</em>
+                </a><br>
+                <strong>Description:</strong> Creates a dynamic masking policy named salary_masking_policy for the salary field, which reveals the actual salary value only to users with the LEAD_DEVELOPER role and masks it for all other users. It then applies this masking policy to the salary column in the employee table.<br>
+                </br>
+                <strong>Script Name:</strong> 
+                <a href="https://github.com/stehardy90/DataEngineerPortfolio/blob/main/sql_scripts/snowflake_dynamic_pivot.sql" target="_blank">
+                    <em>snowflake_dynamic_pivot.sql</em>
+                </a><br>
+                <strong>Description:</strong> Dynamically pivots the results of the 'SupplierSales' CTE, making use of the Snowflake 'ANY' keyword. Without 'ANY', each SUPPLIER_ID would need to be explicitly specified, which is inefficient and difficult to maintain when IDs frequently change.<br>
+                </br>
+                <strong>Script Name:</strong> 
+                <a href="https://github.com/stehardy90/DataEngineerPortfolio/blob/main/sql_scripts/snowflake_timetravel.sql" target="_blank">
+                    <em>snowflake_timetravel.sql</em>
+                </a><br>
+                <strong>Description:</strong> Uses Snowflakes timetravel functionality to access and query historical data from a previous point in time, useful for recovering accidentally deleted or modified data, auditing changes, and comparing past and current states of data without needing backups or manual version control.<br>
+            </div>
+        </div>
         </br>
 
         <!-- Streaming Work in Progress Banner -->
