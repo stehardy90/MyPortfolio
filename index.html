@@ -180,7 +180,7 @@
                 <strong>Project Purpose and Overview</strong> 
                 </br>
                 </br>
-                <strong>Overview</strong>
+                <strong>Overview</strong> </br>
                 This project demonstrates a complete data engineering pipeline, built using <b>Medallion Architecture</b> principles. The data is ingested, processed, and stored in layers, starting from raw, untransformed data (Bronze), to cleaned and structured data (Silver), and finally to aggregated data ready for reporting and analysis (Gold). This architecture ensures scalability, data lineage, and traceability.
                 <p>Data is pulled from the football-data.org API and ingested into <b>Google BigQuery</b> using <b>Python</b>. The raw .json data is stored in the Bronze layer, while <b>dbt</b> models process, test and transform the data into Silver and Gold layers, each representing cleaner and more enriched datasets. The pipeline uses <b>Apache Airflow</b> for scheduling and orchestration, while <b>Docker</b> provides a containerised environment for consistent deployment.</p>
                 <p>The project incorporates key aspects of modern data engineering workflows, such as <b>incremental data loading</b>, <b>Type 2 Slowly Changing Dimensions (SCDs)</b>, and <b>real-time error monitoring and alerting</b> via Slack notifications.</p>
