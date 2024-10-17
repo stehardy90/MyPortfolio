@@ -296,20 +296,19 @@
                 <strong>Description:</strong> This script streams real-time comments from a specified subreddit using the Reddit API (PRAW) and sends the structured comment data to a Kafka topic. It integrates environment variables for Reddit API credentials and the subreddit name using python-dotenv for flexibility. Additionally, the script implements retry logic for establishing a Kafka producer connection, ensuring reliable data ingestion into Kafka.<br>
                 <strong>Key Details:</strong>
                 <ul>
-                    <li><strong>Key Competencies:</strong> API Integration, data Streaming and messaging, error handling, scalability</li>
+                    <li><strong>Key Competencies:</strong> API integration, data streaming and messaging, error handling, scalability</li>
                 </ul>
             </div>
 
             <div class="script-box">
                 <strong>Script Name:</strong> 
-                <a href="https://github.com/stehardy90/DataEngineerPortfolio/blob/main/sql_scripts/placeholder.sql" target="_blank">
-                    <em>placeholder_python_script_2.py</em>
+                <a href="https://github.com/stehardy90/DataEngineerPortfolio/blob/main/python_scripts/football_dbt_etl_pipeline.py" target="_blank">
+                    <em>football_dbt_etl_pipeline.py</em>
                 </a><br>
-                <strong>Description:</strong> This Python script extracts data from an API, cleans the data, and loads it into a data warehouse for reporting.<br>
+                <strong>Description:</strong> This Airflow DAG orchestrates an ETL pipeline for football data, leveraging dbt to run data transformations and tests. It ingests competition data, runs dbt models for both silver and gold layers, and executes data quality checks using dbt tests. The pipeline logs detailed ETL metadata to Google BigQuery for auditing, and integrates with Slack to send alerts in case of task failures. The script implements robust error handling and logging, ensuring reliable execution and monitoring of data workflows.<br>
                 <strong>Key Details:</strong>
                 <ul>
-                    <li><strong>Purpose:</strong> To automate ETL processes for API data.</li>
-                    <li><strong>Performance:</strong> Processes data in real time, handling up to 10,000 API calls per hour.</li>
+                    <li><strong>Key Competencies:</strong> Airflow DAG design, dbt integration, error handling, BigQuery logging</li>
                 </ul>
             </div>
 
