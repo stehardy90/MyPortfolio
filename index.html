@@ -180,8 +180,14 @@
                 <strong>Project Purpose and Overview</strong> 
                 </br>
                 <ul>
-                    <li><strong>Purpose:</strong> The procedure ensures that the fact.orders table is up-to-date with the latest order data, using efficient filtering and caching mechanisms to handle only relevant records, improving performance and data accuracy.</li>
-
+                    <strong>Overview</strong>
+                    <p>This project demonstrates a complete data engineering pipeline, built using Medallion Architecture principles. he data is ingested, processed, and stored in layers, starting from raw, untransformed data (Bronze), to cleaned and structured data (Silver), and finally to aggregated data ready for reporting and analysis (Gold). This architecture ensures scalability, data lineage, and traceability.</p>
+                    <p>Data is pulled from the football-data.org API and ingested into <b>Google BigQuery</b> using <b>Python</b>. The raw .json data is stored in the Bronze layer, while <b>dbt</b> models process, test and transform the data into Silver and Gold layers, each representing cleaner and more enriched datasets. The pipeline uses <b>Apache Airflow</b> for scheduling and orchestration, while <b>Docker</b> provides a containerised environment for consistent deployment.</p>
+                    <p>The project incorporates key aspects of modern data engineering workflows, such as <b>incremental data loading</b>, <b>Type 2 Slowly Changing Dimensions (SCDs)</b>, and <b>real-time error monitoring and alerting</b> via Slack notifications.</p>
+                    <strong>Purpose</strong>
+                    <li><strong>Skill Development:</strong> The primary goal of this project was to deepen my experience with modern data engineering tools, such as dbt, Apache Airflow, Google BigQuery, and Docker. These tools are widely used in industry to build scalable, efficient, and maintainable data pipelines.</li>
+                    <li><strong>Learning Opportunity:</strong> Working on this project helped me tackle complex data orchestration, scheduling, and incremental processing concepts. Despite the limitations of the free data plan, the emphasis was on robust pipeline architecture and best practices.</li>
+         
                 </ul>
             </div>
 
@@ -194,7 +200,7 @@
             </div>
 
             <div class="project-box">
-                <strong>Challenges and Solutions</strong> 
+                <strong>Challenges and Learning Outcomes</strong> 
                 </br>
                 <ul>
                     <li><strong>Purpose:</strong> The procedure ensures that the fact.orders table is up-to-date with the latest order data, using efficient filtering and caching mechanisms to handle only relevant records, improving performance and data accuracy.</li>
@@ -207,7 +213,8 @@
                 <strong>Limitations and Future Improvements</strong> 
                 </br>
                 <ul>
-                    <li><strong>Cost:</strong> As this was a personal project, I aimed to keep costs at zero. This introduced some limitations, particularly in the volume of data I could retrieve from the football-data.org API, which significantly restricted the depth and breadth of the analysis and insights I could generate.</li>
+                    <li><strong>Cost:</strong> As this was a personal project, I aimed to keep costs at zero. This introduced some limitations, particularly in the volume of data I could retrieve from the football-data.org API.</li>
+                    <li><strong>Data Limitations:</strong> As mentioned, due to the constraints of the free football-data.org API, the dataset is limited in scope. The analysis is also simplified, focusing more on the pipeline's technical aspects rather than deep insights from the data itself.</li>
                 </ul>
                
             </div>
