@@ -175,12 +175,12 @@
             <a href="https://github.com/stehardy90/DataEngineerPortfolio/tree/main/football-data-pipeline" target="_blank">
             <img src="page_images/footballarch_v2.png" alt="Football Pipeline Architecture" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
             </a>
+        <i>Click the image above to access the project repository.</i>
         </br>
             <div class="project-box">
                 <strong>Project Purpose and Overview</strong> 
                 </br>
                 </br>
-                <strong>Overview</strong> </br>
                 This project demonstrates a complete data engineering pipeline, built using <b>Medallion Architecture</b> principles. Data flows through structured layers—Bronze for raw ingestion, Silver for transformation and validation, and Gold for aggregated insights—ensuring <b>scalability</b>, <b>data lineage</b>, and <b>traceability</b>.
                 <p>Football-related data is ingested from the football-data.org API into <b>Google BigQuery</b> using <b>Python</b>. The <b>dbt</b> models are responsible for processing and transforming the raw JSON data through the Silver and Gold layers, while <b>Apache Airflow</b> handles orchestration and scheduling. <b>Docker</b> ensures consistent deployment across environments.</p>
                 <p>The project incorporates key aspects of modern data engineering workflows, such as <b>incremental data loading</b>, <b>Type 2 Slowly Changing Dimensions (SCDs)</b>, and <b>real-time error monitoring and alerting</b> via Slack notifications.</p>
@@ -191,33 +191,6 @@
                 </ul>
             </div>
 
-            <div class="project-box">
-                <strong>Key Features and Architecture</strong> 
-                </br>
-                <ul>
-                    <li><strong>Data quality and integrity:</strong> At the transform stage, thorough data cleaning processes are applied to standardize and validate the incoming data. Additionally, comprehensive dbt tests are implemented at every stage of the pipeline. This ensures that data quality and integrity are rigorously enforced; issues can be detected early, preventing flawed data from propagating downstream and ensuring reliable, high-quality datasets for analysis.</li>
-                </ul>
-            </div>
-
-            <div class="project-box">
-                <strong>Challenges and Learning Outcomes</strong> 
-                </br>
-                <ul>
-                    <li><strong>Purpose:</strong> The procedure ensures that the fact.orders table is up-to-date with the latest order data, using efficient filtering and caching mechanisms to handle only relevant records, improving performance and data accuracy.</li>
-                </ul>                
-            
-            
-            </div>
-
-           <div class="project-box">
-                <strong>Limitations and Future Improvements</strong> 
-                </br>
-                <ul>
-                    <li><strong>Cost:</strong> As this was a personal project, I aimed to keep costs at zero. This introduced some limitations, particularly in the volume of data I could retrieve from the football-data.org API.</li>
-                    <li><strong>Data Limitations:</strong> As mentioned, due to the constraints of the free football-data.org API, the dataset is limited in scope. The analysis is also simplified, focusing more on the pipeline's technical aspects rather than deep insights from the data itself.</li>
-                </ul>
-               
-            </div>
         </br>
 
         <!-- Streaming Work in Progress Banner -->
