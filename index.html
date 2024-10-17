@@ -68,6 +68,17 @@
             margin-bottom: 20px;
         }
         
+        .project-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: 100%; /* Make sure the box spans the entire width */
+            box-sizing: border-box; /* Ensure padding is included within the width */
+            display: block; /* Make sure each box behaves like a block element */
+        } 
+        
         .tech-stack-container {
             display: flex;
             justify-content: space-between;
@@ -165,8 +176,7 @@
             <img src="page_images/footballarch_v2.png" alt="Football Pipeline Architecture" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
             </a>
         </br>
-        <div class="scripts-container">
-            <div class="intro-box">
+            <div class="project-box">
                 <strong>Project Purpose and Overview</strong> 
                 </br>
                 <ul>
@@ -175,7 +185,7 @@
                 </ul>
             </div>
 
-            <div class="intro-box">
+            <div class="project-box">
                 <strong>Key Features and Architecture</strong> 
                 </br>
                 <ul>
@@ -183,7 +193,7 @@
                 </ul>
             </div>
 
-            <div class="intro-box">
+            <div class="project-box">
                 <strong>Challenges and Solutions</strong> 
                 </br>
                 <ul>
@@ -193,7 +203,7 @@
             
             </div>
 
-           <div class="intro-box">
+           <div class="project-box">
                 <strong>Limitations and Future Improvements</strong> 
                 </br>
                 <ul>
@@ -201,7 +211,6 @@
                 </ul>
                
             </div>
-        </div>
         </br>
 
         <!-- Streaming Work in Progress Banner -->
