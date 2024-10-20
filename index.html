@@ -269,6 +269,22 @@
                 <span class="close" onclick="closeModal()">&times;</span>
                 <img class="modal-content" id="lightbox-image">
             </div>
+            
+        <script>
+                // Open the Modal
+                function openModal(imageSrc) {
+                    var modal = document.getElementById("lightbox-modal");
+                    var modalImage = document.getElementById("lightbox-image");
+                    modal.style.display = "block";  // Show the modal
+                    modalImage.src = imageSrc;      // Set the image source
+                }
+        
+                // Close the Modal
+                function closeModal() {
+                    var modal = document.getElementById("lightbox-modal");
+                    modal.style.display = "none";  // Hide the modal
+                }
+            </script>
 
         
         </br>
