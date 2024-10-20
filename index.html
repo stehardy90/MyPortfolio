@@ -170,6 +170,49 @@
             cursor: pointer; /* Show a pointer when hovering */
         }
 
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+        }
+        
+        /* Modal Content (the image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 80%; /* Set a max width for the image */
+            max-height: 80%; /* Set a max height for the image */
+        }
+        
+        /* Close Button (the "X") */
+        .close {
+            position: absolute;
+            top: 50px;
+            right: 80px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        /* Add Animation (optional) */
+        .modal-content {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+        
+        @keyframes zoom {
+            from {transform: scale(0)}
+            to {transform: scale(1)}
+        }
+
     </style>
 </head>
 <body>
@@ -222,6 +265,12 @@
             </a>
             </div>
 
+            <div id="lightbox-modal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img class="modal-content" id="lightbox-image">
+            </div>
+
+        
         </br>
 
         <!-- Streaming Work in Progress Banner -->
