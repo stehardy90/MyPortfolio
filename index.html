@@ -168,6 +168,12 @@
             height: auto; /* Maintain original aspect ratio */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better visuals */
             cursor: pointer; /* Show a pointer when hovering */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .screenshots-grid img:hover {
+            transform: scale(1.05); /* Slight zoom */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Larger shadow */
         }
 
         .modal {
